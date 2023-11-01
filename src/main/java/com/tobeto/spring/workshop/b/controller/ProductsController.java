@@ -51,7 +51,8 @@ public class ProductsController {
                 product.setStock(updatedProduct.getStock());
                 product.setPrice(updatedProduct.getPrice());
 
-                return product.getName() + " product updated successfully!";
+                return "Product updated! \nID: " + id + ", \nNew Information: \nName: " + product.getName() +
+                        ", \nCategory: " + product.getCategory() + ", \nStock: " + product.getStock() + "\nPrice: " + product.getPrice();
             }
         }
         return "Product not found!";
