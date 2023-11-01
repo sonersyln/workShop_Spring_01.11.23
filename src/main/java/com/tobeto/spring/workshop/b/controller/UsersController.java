@@ -47,7 +47,8 @@ public class UsersController {
                 user.setPassword(updatedUser.getPassword());
                 user.setPhone(updatedUser.getPhone());
 
-                return user.getName() + " kullanıcı başarıyla güncellendi.";
+                return "Kullanıcı güncellendi! \nID: " + id + ", \nYeni Bilgiler: \nİsim: " + user.getName() +
+                        ", \nE-mail: " + user.getEmail() + ", \nŞifre: " + user.getPassword() + "\nTelefon: " + user.getPhone();
             }
 
         }
