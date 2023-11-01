@@ -1,9 +1,6 @@
 package com.tobeto.spring.workshop.b.controller;
-
 import com.tobeto.spring.workshop.b.module.Product;
-
 import jakarta.annotation.PostConstruct;
-
 import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.Comparator;
