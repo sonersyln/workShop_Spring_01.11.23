@@ -30,7 +30,6 @@ public class UsersController {
     public String updateUser(@PathVariable int id, @RequestBody User updatedUser) {
         return this.userService.updateProduct(id,updatedUser);
     }
-
     @DeleteMapping("/delete/{id}")
     public String deleteUser(@PathVariable int id) {
         return this.userService.delete(id);
