@@ -34,7 +34,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\": 11,\r\n        \"name\": \"Azra333\",\r\n        \"email\": \"azra@azra.com\",\r\n        \"password\": \"suleyman123\",\r\n        \"phone\": \"5333572837\"\r\n    }",
+					"raw": "{\r\n        \"id\": 7,\r\n        \"name\": \"Jack\",\r\n        \"email\": \"Jack@Jack.com\",\r\n        \"password\": \"Jack123\",\r\n        \"phone\": \"5333572837\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -64,7 +64,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"mahmut\",\r\n        \"email\": \"azra@azra.com\",\r\n        \"password\": \"suleyman123\",\r\n        \"phone\": \"5333572837\"\r\n    }",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"name\": \"Stephen\",\r\n        \"email\": \"Stephen@Stephen.com\",\r\n        \"password\": \"Stephen123\",\r\n        \"phone\": \"5333572837\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -94,7 +94,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/users/delete/11",
+					"raw": "http://localhost:8080/api/users/delete/8",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -104,7 +104,7 @@
 						"api",
 						"users",
 						"delete",
-						"11"
+						"8"
 					]
 				}
 			},
@@ -138,7 +138,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \"id\": 11,\r\n        \"name\": \"Laptop\",\r\n        \"price\": 1999.99,\r\n        \"stock\": 70,\r\n        \"category\": \"Electronics\"\r\n    }",
+					"raw": "{\r\n        \"id\": 6,\r\n        \"name\": \"Laptop\",\r\n        \"price\": 1999.99,\r\n        \"stock\": 70,\r\n        \"category\": \"Electronics\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -176,7 +176,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/products/update/2",
+					"raw": "http://localhost:8080/api/products/update/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -186,7 +186,7 @@
 						"api",
 						"products",
 						"update",
-						"2"
+						"1"
 					]
 				}
 			},
@@ -198,7 +198,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/products/delete/4",
+					"raw": "http://localhost:8080/api/products/delete/15",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -208,7 +208,7 @@
 						"api",
 						"products",
 						"delete",
-						"4"
+						"15"
 					]
 				}
 			},
