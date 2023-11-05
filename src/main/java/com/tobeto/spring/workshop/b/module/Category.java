@@ -9,11 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Category {
     private int id;
     private String name;
-    private String email;
-    private String password;
-    private String phone;
-
 }

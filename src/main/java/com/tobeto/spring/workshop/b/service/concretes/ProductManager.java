@@ -10,8 +10,8 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Service
 public class ProductManager implements ProductService {
-
     ProductRepository products;
+
 @Autowired
     public ProductManager(ProductRepository productRepository) {
         this.products = productRepository;
@@ -20,6 +20,11 @@ public class ProductManager implements ProductService {
     @Override
     public List<Product> getall() {
         return products.getall();
+    }
+
+    @Override
+    public Product getById(int id) {
+        return products.getById(id);
     }
 
     @Override

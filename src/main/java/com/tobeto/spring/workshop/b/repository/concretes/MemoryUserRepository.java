@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+
 @Service
 public class MemoryUserRepository implements UserRepository {
 
@@ -33,33 +34,31 @@ public class MemoryUserRepository implements UserRepository {
     }
 
     @Override
-    public String delete(int id) {
-        for (User user : users) {
-            if (user.getId() == id) {
-                users.remove(user);
-                return user.getName() + " user deleted successfully.";
-            }
-        }
-        return "User not found!";
+    public User getById(int id) {
+        User user = users.stream().filter(u -> u.getId() == id).findFirst().orElseThrow();
+        return user;
+    }
 
+    @Override
+    public String delete(int id) {
+        User user = users.stream().filter((u -> u.getId() == id)).findFirst().orElseThrow();
+        users.remove(user);
+        return user.getName() + " user deleted successfully.";
     }
 
     @Override
     public String updateUser(int id, User updatedUser) {
-        for (User user : users) {
-            if (user.getId() == id) {
-                user.setName(updatedUser.getName());
-                user.setPhone(updatedUser.getPhone());
-                user.setPassword(updatedUser.getPassword());
-                user.setEmail(updatedUser.getEmail());
-            }
+        User user = users.stream().filter(u -> u.getId() == id).findFirst().orElseThrow();
+        user.setName(updatedUser.getName());
+        user.setPhone(updatedUser.getPhone());
+        user.setPassword(updatedUser.getPassword());
+        user.setEmail(updatedUser.getEmail());
 
-            return "User updated! \nID: " + id + ", \nNew Information: \nName: " + user.getName() + ", \nEmail: " +
-                    user.getEmail() + ", \nPassword: " + user.getPassword() + "\nPhone: " + user.getPhone();
-        }
-
-        return "User not found!";
+        return "User updated! \nID: " + id + ", \nNew Information: \nName: "
+                + user.getName() + ", \nEmail: " + user.getEmail() + ", \nPassword: "
+                + user.getPassword() + "\nPhone: " + user.getPhone();
     }
 
-
 }
+
+

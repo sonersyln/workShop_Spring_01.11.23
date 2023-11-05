@@ -9,6 +9,7 @@ public interface UserService {
     List<User> getall();
     String add(User user);
     String delete(int id);
-    String updateProduct(int id, User updatedUser);
+    String updateUser(int id, User updatedUser);
+    User getById(int id);
 
 }

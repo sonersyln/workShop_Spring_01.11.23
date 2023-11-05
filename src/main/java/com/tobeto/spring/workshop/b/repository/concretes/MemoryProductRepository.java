@@ -32,30 +32,31 @@ public class MemoryProductRepository implements ProductRepository {
     }
 
     @Override
+    public Product getById(int id) {
+        Product product = products.stream().filter(p -> p.getId() == id).findFirst().orElseThrow();
+        return product;
+    }
+
+
+    @Override
     public String delete(int id) {
-        for (Product product : products) {
-            if (product.getId() == id) {
-                products.remove(product);
-                return product.getName() + " product deleted successfully.";
-            }
-        }
-        return "Product not found!";
+        Product product = products.stream().filter(p -> p.getId() == id).findFirst().orElseThrow();
+        products.remove(product);
+        return product.getName() + " product deleted successfully.";
     }
 
     @Override
-        public String updateProduct(int id, Product updatedProduct) {
-        for (Product product : products) {
-            if (product.getId() == id) {
-                product.setName(updatedProduct.getName());
-                product.setStock(updatedProduct.getStock());
-                product.setCategory(updatedProduct.getCategory());
-                product.setPrice(updatedProduct.getPrice());
-                return "Product updated! \nID: " + id + ", \nNew Information: \nName: " + updatedProduct.getName() +
-                        ", \nCategory: " + updatedProduct.getCategory() + ", \nStock: " + updatedProduct.getStock() + "\nPrice: " + updatedProduct.getPrice();
+    public String updateProduct(int id, Product updatedProduct) {
+        Product product = products.stream().filter(p -> p.getId() == id).findFirst().orElseThrow();
 
-            }
-        }
-        return "Product not found!";
+        product.setName(updatedProduct.getName());
+        product.setStock(updatedProduct.getStock());
+        product.setCategory(updatedProduct.getCategory());
+        product.setPrice(updatedProduct.getPrice());
+
+        return "Product updated! \nID: " + id + ", \nNew Information: \nName: " + updatedProduct.getName()
+                + ", \nCategory: " + updatedProduct.getCategory() + ", \nStock: " + updatedProduct.getStock()
+                + "\nPrice: " + updatedProduct.getPrice();
     }
 
 

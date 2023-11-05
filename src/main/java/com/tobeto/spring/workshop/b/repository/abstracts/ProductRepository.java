@@ -11,4 +11,6 @@ public interface ProductRepository {
     List<Product> getall();
     String delete(int id);
     String updateProduct(int id,Product updatedProduct);
+
+    Product getById(int id);
 }

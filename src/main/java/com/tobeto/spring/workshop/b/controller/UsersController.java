@@ -20,6 +20,11 @@ public class UsersController {
     public List<User> getAllUsersSortedById() {
         return this.userService.getall();
     }
+    @GetMapping("/get/{id}")
+    public User getUserById(@PathVariable int id) {
+        return this.userService.getById(id);
+    }
+
 
     @PostMapping("/add")
     public String createUser(@RequestBody User user) {
@@ -34,4 +39,5 @@ public class UsersController {
     public String deleteUser(@PathVariable int id) {
         return this.userService.delete(id);
     }
+
 }

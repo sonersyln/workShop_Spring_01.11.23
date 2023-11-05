@@ -22,6 +22,11 @@ public class UserManager implements UserService {
     }
 
     @Override
+    public User getById(int id) {
+        return users.getById(id);
+    }
+
+    @Override
     public String add(User user) {
         return users.add(user);
     }
@@ -32,7 +37,7 @@ public class UserManager implements UserService {
     }
 
     @Override
-    public String updateProduct(int id, User updatedUser) {
+    public String updateUser(int id, User updatedUser) {
         return users.updateUser(id,updatedUser);
     }
 }

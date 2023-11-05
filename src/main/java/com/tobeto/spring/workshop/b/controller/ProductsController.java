@@ -21,6 +21,10 @@ public class ProductsController {
     public List<Product> getAllProductsSortedById() {
         return productService.getall();
     }
+    @GetMapping("/get/{id}")
+    public Product getProductById(@PathVariable int id) {
+        return productService.getById(id);
+    }
 
     @PostMapping("/add")
     public String createProduct(@RequestBody Product product) {

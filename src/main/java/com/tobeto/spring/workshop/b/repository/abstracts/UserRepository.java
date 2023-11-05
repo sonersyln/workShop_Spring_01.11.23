@@ -9,4 +9,5 @@ public interface UserRepository {
     List<User> getall();
     String delete(int id);
     String updateUser(int id, User updatedUser);
+    User getById(int id);
 }
